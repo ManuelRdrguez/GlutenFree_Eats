@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="utf-8">
-<title>Inicio de sesión</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../static/css/css_login.css">
+<head>
+	<meta charset="utf-8">
+	<title>Inicio de sesión</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/static/css/css_login.css}">
+
 </head>
+
 <body>
 
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-		
+
 			</div>
 		</div>
 	</nav>
@@ -41,8 +36,9 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center ">
 				<form th:action="@{/login}" method="post">
-					<img src="../static/images/GLUTENFREE.png"class="img-fluid pt-4" style="width: 400px; padding-top: 100px;">
-<!-- 
+					<img src="../static/images/GLUTENFREE.png" class="img-fluid pt-4"
+						style="width: 400px; padding-top: 100px;">
+					<!-- 
 					<div th:if=${param.error}>
 						<div class="alert alert-danger">Usuario o contraseña
 							inválidos</div>
@@ -53,16 +49,16 @@
 						</div>
 					</div> -->
 
-				
+
 					<div class="form-group-lg">
-						<label  for="username"></label> <input id="username"  name="username" type="text" class="form-control"
-							required autofocus="autofocus" placeholder="Introduzca su correo electrónico">
+						<label for="username"></label> <input id="username" name="username" type="text"
+							class="form-control" required autofocus="autofocus"
+							placeholder="Introduzca su correo electrónico">
 					</div>
 
 					<div class="form-group-lg">
-						<label  for="password"></label> <input
-							id="password" type="password"  name="password" class="form-control" required
-							autofocus="autofocus" placeholder="Inotroduzca su contraseña">
+						<label for="password"></label> <input id="password" type="password" name="password"
+							class="form-control" required autofocus="autofocus" placeholder="Inotroduzca su contraseña">
 					</div>
 
 					<div class="form-group-lg">
@@ -84,9 +80,9 @@
 
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 </body>
+
 </html>
