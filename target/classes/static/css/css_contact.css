@@ -1,0 +1,132 @@
+
+body{
+    background-image: url('/images/pixelcut-export.jpeg');
+    background-size: cover; /* Para cubrir todo el cuerpo */
+    background-position: center; /* Para centrar la imagen */
+}
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#cabecera{
+    background-color: black;
+}
+
+.icono_like{
+    margin-left: 30px;
+}
+
+.btn {
+    background-color: rgb(169, 1, 1);
+    border: solid 1px;
+    border-color: rgb(169, 1, 1);
+}
+
+
+.imagen_perfil{
+    margin-left: 20px;
+}
+#botonsearch{
+    background-color: rgb(169, 1, 1);
+    color: white;
+    border:  rgb(169, 1, 1);		
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#icono-blanco {
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+.circulo {
+    width: 60px; /* Ajusta el tamaño según tus necesidades */
+     /* Debe ser igual al ancho para un círculo perfecto */
+    border-radius: 90%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Esconde cualquier contenido que se salga del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.circulo img {
+    width: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+    height: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+
+.formulario-container {
+    background-color: white; /* Fondo blanco para el formulario */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 700px;
+}
+
+.formulario-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario-container button {
+    width: 100%;
+    padding: 10px;
+    background-color:  rgb(169, 1, 1); /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario-container button:hover {
+    background-color: rgb(136, 1, 1);
+}
+.formulario-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: rgb(169, 1, 1);
+    border: solid 1px;
+    border-color: rgb(169, 1, 1);
+    margin-left: 10px;
+}
+.btn {
+    background-color: rgb(169, 1, 1);
+    border: solid 1px;
+    border-color: rgb(169, 1, 1);
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+a:hover{
+    color: grey;
+}

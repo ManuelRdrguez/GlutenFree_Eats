@@ -1,0 +1,62 @@
+body{
+    background-image: url('/images/clarissa-carbungco-uy9djw9e_vs-unsplash 1-2700h.jpg');
+    background-size: cover; /* Para cubrir todo el cuerpo */
+    background-position: center; /* Para centrar la imagen */
+}
+
+span{ 
+    color: white;
+    font-weight: bold;
+    color: #ffffff; /* Color del texto */
+            padding: 5px 10px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño de la fuente */
+            font-weight: bold; /* Negrita */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra del texto */
+}
+a{
+
+    color: rgb(196, 226, 242);
+}
+
+.form-control{
+    display: inline-block; /* Asegura que el label respete el tamaño del contenido */
+    padding: 20px; /* Añade un poco de espacio interno */
+    background-color: #f0f0f0; /* Color de fondo para ver mejor la sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Propiedad de la sombra */
+}
+
+input::placeholder {
+    color: #888888; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo de fuente en cursiva */
+    opacity: 4; /* Control de la opacidad del placeholder */
+}
+
+.btn{
+    background-color: #a50404; /* Color de fondo */
+            color: #ffffff; /* Color del texto */
+            border: none; /* Sin bordes */
+            padding: 5px 20px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de la fuente */
+            font-weight: bold; /* Negrita */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        border-color: rgb(98, 1, 1);
+    }
+
+    .btn:hover{
+        background-color: rgb(98, 1, 1);/* Color de fondo */
+            color: #ffffff; /* Color del texto */
+            border: none; /* Sin bordes */
+            padding: 5px 20px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de la fuente */
+            font-weight: bold; /* Negrita */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        border-color: rgb(98, 1, 1);
+    }
+

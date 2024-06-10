@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>Registro de usuarios</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/css_register.css}">
+
+
+</head>
+
+<body>
+
+
+
+
+	<br>
+	<br>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 ">
+
+
+				<img src="images/GLUTENFREE.png" class="img-fluid pt-4" style="width: 400px; margin-left: 50px;">
+				<div th:if=${param.exito}>
+					<div class="alert alert-info">Se ha registrado exitosamente a
+						la aplicación</div>
+				</div>
+				<form th:action="@{/crearUsuario}" method="post" th:object="${user}" class="form">
+					<div class="form-group">
+						<label class="control-label" for="nombre"></label> <input id="nombre" type="text"
+							class="form-control" th:field="*{name}" required autofocus="autofocus" placeholder="Nombre">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="apellido"> </label> <input id="apellido" class="form-control"
+							th:field="*{apellido}" required autofocus="autofocus" placeholder="Apellido">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="email"> </label> <input id="email" type="email"
+							class="form-control" th:field="*{email}" required autofocus="autofocus" placeholder="Email">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="password"> </label> <input type="password" id="password"
+							class="form-control" th:field="*{password}" required autofocus="autofocus"
+							placeholder="Contraseña">
+					</div>
+
+					<div class="form-group text-center">
+						<button type="submit" class="btn">Crear usuario</button>
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
