@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
         <div class="container">
-            <a class="navbar-brand" id="espacio" href="#">
+            <a class="navbar-brand" id="espacio" th:href="@{home}">
                 <h2>Panel de administración</h2>
             </a>
             <div class="dropdown">
@@ -36,7 +36,7 @@
 
     <div class="container mt-5">
         <h1 class="text-white">Lista de reseñas</h1>
-        <a class="btn btn-primary btn-sm" th:href="@{reseñaNueva}">
+        <a class="btn btn-primary btn-sm" th:href="@{resenaNueva}">
             <i class="bi bi-pencil"></i> Crear nueva reseña
         </a>
         <br>
@@ -56,12 +56,14 @@
                 <tr th:each="reseña : ${reseñas}">
                     <td th:text="${reseña.restaurante.nombre}">Nombre del Restaurante</td>
                     <td th:text="${reseña.puntuacion}">Puntuacion</td>
-                    <td th:text="${reseña.comentario}">Comentario</td>
+                    <td th:text="${reseña.comentarios}">Comentario</td>
                     <td th:text="${reseña.usuario.username}">Nombre del Usuario</td>
                     <td>
+						<a  th:href="@{/admin/resenas/delete/{id}(id=${reseña.id})}" onclick="return confirm('¿Estás seguro?')">
                         <button class="btn btn-danger btn-sm">
                             <i class="bi bi-trash"></i> Eliminar
                         </button>
+						</a>
                     </td>
                 </tr>
             </tbody>

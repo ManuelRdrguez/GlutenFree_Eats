@@ -23,14 +23,12 @@ public class ReseñaServiceImpl implements ReseñaService{
         return reseñaRepository.findAll();
 
 	}
-	@Override
-	public Reseña crearReseña(String comentario, int puntuacion,  String nombrerestaurante, String username) {
-		  Usuario usuario = usuarioRepository.findByEmail(username);
-	        if (usuario == null) {
-	            throw new IllegalArgumentException("Usuario no encontrado");
-	        }
-	        Reseña reseña = new Reseña(comentario, puntuacion, nombrerestaurante, usuario);
+	  public Reseña createReseña(Reseña reseña) {
 	        return reseñaRepository.save(reseña);
-	    }		
+	    }
+	public void deleteById(Long id) {
+		reseñaRepository.deleteById(id);		
+	}
+	
 	}
 

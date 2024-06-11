@@ -1,11 +1,6 @@
 package com.example.glutenfree.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Reseñas")
@@ -14,25 +9,29 @@ public class Reseña {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private String comentario;
+
+    @Column(name = "puntuacion")
     private int puntuacion;
 
-    @ManyToOne
+    @Column(name = "comentarios", length = 1000)
+    private String comentarios;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "restaurante_id", nullable = false)
     private Restaurante restaurante;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
 
-    private String nombre_restaurante; 
     // Constructors
     public Reseña() {
     }
 
-    public Reseña(String comentario, int puntuacion, String nombre_restaurante, Usuario usuario) {
-        this.comentario = comentario;
+    public Reseña(int puntuacion, String comentarios, Restaurante restaurante, Usuario usuario) {
         this.puntuacion = puntuacion;
-        this.nombre_restaurante = nombre_restaurante;
+        this.comentarios = comentarios;
+        this.restaurante = restaurante;
         this.usuario = usuario;
     }
 
@@ -41,24 +40,8 @@ public class Reseña {
         return id;
     }
 
-    public String getNombre_restaurante() {
-		return nombre_restaurante;
-	}
-
-	public void setNombre_restaurante(String nombre_restaurante) {
-		this.nombre_restaurante = nombre_restaurante;
-	}
-
-	public void setId(Long id) {
+    public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getComentario() {
-        return comentario;
-    }
-
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
     }
 
     public int getPuntuacion() {
@@ -67,6 +50,14 @@ public class Reseña {
 
     public void setPuntuacion(int puntuacion) {
         this.puntuacion = puntuacion;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(String comentarios) {
+        this.comentarios = comentarios;
     }
 
     public Restaurante getRestaurante() {
@@ -83,4 +74,5 @@ public class Reseña {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }}
+    }
+}

@@ -116,7 +116,7 @@ public class AdminController {
     }
     
     
-    @GetMapping("/reseñas")
+    @GetMapping("/resenas")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String listarReseñas(Model model) {
         List<Reseña> reseñas = reseñaService.findAll();
@@ -124,19 +124,31 @@ public class AdminController {
         return "auth/admin/admin_reseñas";
     }
     
-    @GetMapping("/reseñaNueva")
-    public String mostrarFormularioReseña(Model model) {
-        List<Restaurante> restaurantes = restauranteService.findAll();
+ 
+    @GetMapping("/resenaNueva")
+    public String showCreateReseñaForm(Model model) {
+    	List<Restaurante> restaurantes = restauranteService.findAll();
         model.addAttribute("restaurantes", restaurantes);
         model.addAttribute("reseña", new Reseña());
         return "auth/admin/crearResena";
     }
-    @PostMapping("/reseñaNueva")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
 
-    public String crearReseña(@ModelAttribute("reseña") Reseña reseña) {
-    	String nombreRestaurante = reseña.getRestaurante().getNombre(); // Obtener el nombre del restaurante desde el objeto Reseña
-        reseñaService.crearReseña(reseña.getComentario(), reseña.getPuntuacion(), reseña.getRestaurante().getNombre(), reseña.getUsuario().getUsername());
-        return "redirect:/admin/reseñas";
+    @PostMapping("/resenaNueva")
+    public String createReseña(@ModelAttribute("reseña") Reseña reseña) {
+        String username = reseña.getUsuario().getUsername();
+        Usuario usuario = userservice.findByUsername(username);
+        if (usuario == null) {
+            // Usuario no encontrado, mostrar mensaje de error y volver al formulario
+            return "redirect:/admin/resenaNueva?error=Usuario no encontrado";
+        }
+        reseña.setUsuario(usuario);
+        reseñaService.createReseña(reseña);
+        return "redirect:/admin/resenaNueva?success";
+    }
+    @GetMapping("/resenas/delete/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")    
+    public String eliminarReseña(@PathVariable("id") Long id) {
+        reseñaService.deleteById(id);
+        return "redirect:/admin/resenas";
     }
 }
