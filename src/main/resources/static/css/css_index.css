@@ -1,0 +1,132 @@
+body {
+    background-image: url('/images/pixelcut-export.jpeg');
+    background-size: cover;
+    /* Para cubrir todo el cuerpo */
+    background-position: center;
+    /* Para centrar la imagen */
+}
+
+h5 img {
+    width: 200px;
+}
+
+h5 {
+    margin-right: 50px;
+}
+
+.card-title {
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5%;
+    color: white;
+    font-size: 60px;
+}
+
+h4 {
+    margin-left: 5%;
+    color: white;
+}
+
+#buscador {
+    width: 100px;
+}
+
+#botoniniciarsesion {
+    background-color: rgb(169, 1, 1);
+    color: white;
+    border: rgb(169, 1, 1);
+}
+
+#botonsearch {
+    background-color: rgb(169, 1, 1);
+    color: white;
+    border: rgb(169, 1, 1);
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#cabecera {
+    background-color: black;
+}
+
+.icono_like {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.imagen_perfil {
+    margin-left: 20px;
+}
+
+.custom-red {
+    color: rgb(169, 1, 1);
+    /* Color rojo específico */
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+#tarjeta_info {
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+#color_tarjeta_restaurante {
+    padding: 50px;
+}
+
+#color_tarjeta {
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 5px;
+    width: 900px;
+}
+
+
+
+.btn {
+    background-color: rgb(169, 1, 1);
+    border: solid 1px;
+    border-color: rgb(169, 1, 1);
+
+}
+
+.btn:hover {
+    background-color: rgb(130, 0, 0);
+    border: solid 1px;
+
+
+}
+
+
+
+.carousel {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#textorestaurantes {
+    width: 500px;
+    margin-left: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    color: grey;
+}
