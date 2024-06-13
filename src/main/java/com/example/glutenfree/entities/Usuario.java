@@ -106,6 +106,11 @@ public class Usuario {
 		this.roles = roles;
 	}
 
+	public Usuario getUsuario() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 }

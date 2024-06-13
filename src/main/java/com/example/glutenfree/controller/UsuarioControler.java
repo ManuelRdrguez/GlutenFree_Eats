@@ -53,4 +53,7 @@ public class UsuarioControler {
 		model.addAttribute("usuarios", usuarios);
 		return "auth/admin/usuarios";
 	}
+	
+	
+	
 }

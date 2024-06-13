@@ -24,6 +24,11 @@ body{
     border-color: rgb(169, 1, 1);
 }
 
+.btn:hover{
+	  background-color: rgb(97, 1, 1);
+    border: solid 1px;
+    border-color: rgb(169, 1, 1);
+}
 
 .imagen_perfil{
     margin-left: 20px;
