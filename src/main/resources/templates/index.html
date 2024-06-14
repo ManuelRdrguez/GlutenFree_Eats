@@ -10,8 +10,9 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="/glutenfree/src/main/resources/static/css/css_index.css">
 	<link rel="stylesheet" type="text/css" th:href="@{/css/css_index.css}">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
@@ -19,20 +20,26 @@
 	<div id="cabecera"
 		class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
 		<h5 class="my-0 mr-md-5 font-weight-normal">
+
 			<img src="/images/GLUTENFREE.png" alt="">
 		</h5>
 		<nav class="d-flex my-2 my-md-0 mr-md-auto">
-			<a class="p-3 font-weight-bold" th:href="@{/restaurante}">Restaurantes</a>
-			<a class="p-3 " th:href="@{/contact}">Contacto</a>
+			<a class="p-3 font-weight-bold" th:href="@{/user/home}">Inicio <i class="fas fa-home text-white"></i></a>
+			<a class="p-3 font-weight-bold" th:href="@{/restaurante}">Restaurantes <i
+					class="fas fa-utensils text-white"></i>
+
+			</a>
+			<a class="p-3 font-weight-bold" th:href="@{/contact}">Contacto <i class="fas fa-phone-alt text-white"></i>
+			</a>
+			<a class="p-3 font-weight-bold" th:href="@{/crearRestauranteUser}">Crear Restaurante <i
+					class="fas fa-plus-circle text-white"></i>
+			</a>
+			<a class="p-3 font-weight-bold" th:href="@{/resenaNuevaUser}">Crear Reseñas<i
+					class="fas fa-plus-circle text-white"></i></a>
 		</nav>
-		<div class="flex-grow-1 input-group">
-			<input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search"
-				aria-describedby="search-addon">
-			<button type="button" class="btn btn-outline-danger" id="botonsearch" data-mdb-ripple-init>Buscar</button>
-		</div>
 
 		<div class="dropdown">
-			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botoniniciarsesion"
 				data-bs-toggle="dropdown" aria-expanded="false">
 				<h7>
 					Bienvenido <span sec:authentication="principal.username"></span>
@@ -40,10 +47,11 @@
 			</a>
 
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<li><a class="dropdown-item" th:href="@{/ver_perfil}">Ver perfil <i class="bi bi-person-circle"></i></a></li>
-				<li><a class="dropdown-item"  th:href="@{/ver_reseñas}">Ver reseñas <i class="bi bi-star-fill"></i>
+				<li><a class="dropdown-item" th:href="@{/ver_perfil}">Ver perfil <i class="bi bi-person-circle"></i></a>
+				</li>
+				<li><a class="dropdown-item" th:href="@{/ver_resenas_user}">Tus reseñas <i class="bi bi-star-fill"></i>
 					</a></li>
-				<li><a class="dropdown-item" th:href="@{/restaurantes_visitados}">Restaurantes visitados <i class="bi bi-geo-alt"></i>
+				<li><a class="dropdown-item" th:href="@{/restaurantesUser}">Restaurantes <i class="bi bi-geo-alt"></i>
 					</a></li>
 				<li><a class="dropdown-item" th:href="@{/logout}">Cerrar sesión <i class="bi bi-box-arrow-left"></i>
 					</a></li>

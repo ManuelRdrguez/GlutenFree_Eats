@@ -35,8 +35,6 @@ h4 {
 }
 
 #botoniniciarsesion {
-    margin-left: 70px;
-    width: 200px;
     background-color: rgb(169, 1, 1);
     color: white;
     border: rgb(169, 1, 1);
@@ -101,6 +99,7 @@ p {
     background-color: rgb(169, 1, 1);
     border: solid 1px;
     border-color: rgb(169, 1, 1);
+
 }
 
 .btn:hover {

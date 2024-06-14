@@ -26,7 +26,8 @@ public class AdminController {
 	private UserService userservice;
 	  @Autowired
 	    private ReseñaService reseñaService;
-
+	  @Autowired
+	    private RestauranteService restauranteService;
 	public AdminController(UserService usuarioServicio) {
 		super();
 		this.userservice = usuarioServicio;
@@ -50,8 +51,7 @@ public class AdminController {
  
     
     
-    @Autowired
-    private RestauranteService restauranteService;
+   
 
     @GetMapping("/restaurantes")
     @PreAuthorize("hasRole('ROLE_ADMIN')")

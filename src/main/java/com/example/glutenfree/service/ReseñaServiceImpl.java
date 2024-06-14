@@ -29,6 +29,11 @@ public class ReseñaServiceImpl implements ReseñaService{
 	public void deleteById(Long id) {
 		reseñaRepository.deleteById(id);		
 	}
+	@Override
+	public List<Reseña> findByUser(Usuario user) {
+	    return reseñaRepository.findByUsuario(user);
+
+	}
 	
 	
 	}
