@@ -53,6 +53,9 @@
                 </tr>
             </thead>
             <tbody>
+				 <tr th:if="${#lists.isEmpty(reseñas)}">
+                <td colspan="5">No hay reseñas disponibles.</td>
+            </tr>
                 <tr th:each="reseña : ${reseñas}">
                     <td th:text="${reseña.restaurante.nombre}">Nombre del Restaurante</td>
                     <td th:text="${reseña.puntuacion}">Puntuacion</td>

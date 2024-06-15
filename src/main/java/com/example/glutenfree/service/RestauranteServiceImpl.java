@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.glutenfree.entities.Reseña;
 import com.example.glutenfree.entities.Restaurante;
 import com.example.glutenfree.repository.RestauranteRepository;
 @Service
@@ -36,23 +37,12 @@ public class RestauranteServiceImpl implements RestauranteService {
 
 		@Override
 		public Optional<Restaurante> findById(Long id) {
-			// TODO Auto-generated method stub
 			return restauranteRepository.findById(id);
 		}
 
 
 
-
-
-
-		
-
-
-
-		
 		}
-
-
 
 	
 

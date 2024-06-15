@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.glutenfree.dto.UserRegistro;
+import com.example.glutenfree.entities.Reseña;
 import com.example.glutenfree.entities.Restaurante;
 import com.example.glutenfree.entities.Usuario;
 import com.example.glutenfree.repository.RestauranteRepository;

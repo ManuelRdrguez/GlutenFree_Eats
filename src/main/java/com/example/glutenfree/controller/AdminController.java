@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.glutenfree.entities.Peticion;
 import com.example.glutenfree.entities.Reseña;
 import com.example.glutenfree.entities.Restaurante;
 import com.example.glutenfree.entities.Usuario;
+import com.example.glutenfree.service.PeticionService;
 import com.example.glutenfree.service.ReseñaService;
 import com.example.glutenfree.service.RestauranteService;
 import com.example.glutenfree.service.UserService;
@@ -28,6 +30,9 @@ public class AdminController {
 	    private ReseñaService reseñaService;
 	  @Autowired
 	    private RestauranteService restauranteService;
+	  
+	  @Autowired
+	    private PeticionService peticionService;
 	public AdminController(UserService usuarioServicio) {
 		super();
 		this.userservice = usuarioServicio;
@@ -59,6 +64,19 @@ public class AdminController {
         List<Restaurante> restaurantes = restauranteService.findAll();
         model.addAttribute("restaurantes", restaurantes);
         return "auth/admin/admin_restaurantes";
+    }
+    
+    @GetMapping("/peticiones")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String getAllPeticiones(Model model) {
+        List<Peticion> peticiones = peticionService.findAll();
+        model.addAttribute("peticiones", peticiones);
+        return "auth/admin/admin_peticiones";
+    }
+    @GetMapping("/peticiones/delete/{id}")
+    public String eliminarPeticion(@PathVariable("id") Long id) {
+        peticionService.deleteById(id);
+        return "redirect:/admin/peticiones";
     }
 
     
@@ -110,6 +128,8 @@ public class AdminController {
             existingRestaurante.setDireccion(restaurante.getDireccion());
             existingRestaurante.setHorario(restaurante.getHorario());
             existingRestaurante.setTelefono(restaurante.getTelefono());
+            existingRestaurante.setOpciones_celiacos(restaurante.getOpciones_celiacos());
+
             restauranteService.save(existingRestaurante);
         }
         return "redirect:/admin/restaurantes";

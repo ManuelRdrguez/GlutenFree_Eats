@@ -24,12 +24,14 @@
 			<img src="/images/GLUTENFREE.png" alt="">
 		</h5>
 		<nav class="d-flex my-2 my-md-0 mr-md-auto">
-			<a class="p-3 font-weight-bold text-white" th:href="@{/user/home}">Inicio <i class="fas fa-home text-white"></i></a>
+			<a class="p-3 font-weight-bold text-white" th:href="@{/user/home}">Inicio <i
+					class="fas fa-home text-white"></i></a>
 			<a class="p-3 font-weight-bold text-white" th:href="@{/restaurante}">Restaurantes <i
 					class="fas fa-utensils text-white"></i>
 
 			</a>
-			<a class="p-3 font-weight-bold text-white" th:href="@{/contact}">Contacto <i class="fas fa-phone-alt text-white"></i>
+			<a class="p-3 font-weight-bold text-white" th:href="@{/contact}">Contacto <i
+					class="fas fa-phone-alt text-white"></i>
 			</a>
 			<a class="p-3 font-weight-bold text-white" th:href="@{/crearRestauranteUser}">Crear Restaurante <i
 					class="fas fa-plus-circle text-white"></i>
@@ -61,132 +63,157 @@
 	</div>
 	<div class="container-fluid">
 		<h1>Restaurantes</h1>
-		<h5 id="descripcion">En esta seción encontraras aquellos restauantes que tienen a disposición menús aptos para celíacos. Esperamos que disfrutéis vuestra experiencia! No olvidéis dejarnos vuestra opinión y dejar vuestras reseñas!</h2>
-		<div class="card mb-3 p-3">
-			<img src="/images/Aperturas-2022-Burger-King-Sevilla_21.02.2022.jpg" class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title text-white">Burguer King</h5>
-			  <p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos según el entorno en donde se encuentre.
-			</p> 
-			  <p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001 Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+		<h5 id="descripcion">En esta seción encontraras aquellos restauantes que tienen a disposición menús aptos para
+			celíacos. Esperamos que disfrutéis vuestra experiencia! No olvidéis dejarnos vuestra opinión y dejar
+			vuestras reseñas!</h2>
+			<div class="card mb-3 p-3">
+				<img src="/images/Aperturas-2022-Burger-King-Sevilla_21.02.2022.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-white">Burguer King</h5>
+					<p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada
+						en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos
+						según el entorno en donde se encuentre.
+					</p>
+					<p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001
+							Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+				</div>
+				<div class="d-flex ml-3z	">
+					<h5>Valoraciones </h5> <a th:href="@{/mostrar-reseñas(nombreRestaurante='Burguer King')}"
+						th:text="'Ver reseñas de Burguer King'">Ver reseñas</a> <span><img style="width: 100px;"
+							src="/images/image41358-1nfr-200h.png">
+				</div>
 			</div>
-			<div class="d-flex ml-3z	">
-				<h5>Valoraciones </h5><a href="">Ver reseñas</a>  <span><img style="width: 100px;"
-					src="/images/image41358-1nfr-200h.png"> 
-			</div>
-		</div>
 
-		<div class="card mb-3 p-3">
-			<img src="/images/99d7e3a8-a7f1-4ffd-98e8-79e466d76efd_1800x1200px_McDonalds-3+OK.jpg" class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title text-white">Mcdonald´s</h5>
-			  <p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos según el entorno en donde se encuentre.
-			</p> 
-			  <p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001 Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+			<div class="card mb-3 p-3">
+				<img src="/images/99d7e3a8-a7f1-4ffd-98e8-79e466d76efd_1800x1200px_McDonalds-3+OK.jpg"
+					class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-white">Mcdonald´s</h5>
+					<p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada
+						en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos
+						según el entorno en donde se encuentre.
+					</p>
+					<p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001
+							Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+				</div>
+				<div class="d-flex ml-3z	">
+				<h5>Valoraciones </h5> <a th:href="@{/mostrar-reseñas(nombreRestaurante='Mcdonald´s')}"
+						th:text="'Ver reseñas de Mcdonald´s'">Ver reseñas</a> <span><img style="width: 100px;"
+							src="/images/image41358-1nfr-200h.png">
+				</div>
 			</div>
-			<div class="d-flex ml-3z	">
-				<h5>Valoraciones </h5><a href="">Ver reseñas</a>  <span><img style="width: 100px;"
-					src="/images/image41358-1nfr-200h.png"> 
-			</div>
-		</div>
-
-
-		<div class="card mb-3 p-3">
-			<img src="/images/97A2372.jpg" class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title text-white">La cantina</h5>
-			  <p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos según el entorno en donde se encuentre.
-			</p> 
-			  <p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001 Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
-			</div>
-			<div class="d-flex ml-3z	">
-				<h5>Valoraciones </h5><a href="">Ver reseñas</a>  <span><img style="width: 100px;"
-					src="/images/image41358-1nfr-200h.png"> 
-			</div>
-		</div>
 
 
-		<div class="card mb-3 p-3">
-			<img src="/images/Fachada-establecimiento-Telepizza_1632147279_147856403_667x375.jpg" class="card-img-top" alt="...">
-			<div class="card-body">
-			  <h5 class="card-title text-white">TelePizza</h5>
-			  <p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos según el entorno en donde se encuentre.
-			</p> 
-			  <p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001 Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+			<div class="card mb-3 p-3">
+				<img src="/images/97A2372.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-white">La cantina</h5>
+					<p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada
+						en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos
+						según el entorno en donde se encuentre.
+					</p>
+					<p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001
+							Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+				</div>
+				<div class="d-flex ml-3z	">
+					<h5>Valoraciones </h5> <a th:href="@{/mostrar-reseñas(nombreRestaurante='La cantina')}"
+						th:text="'Ver reseñas de La cantina'">Ver reseñas</a> <span><img style="width: 100px;"
+							src="/images/image41358-1nfr-200h.png">
+				</div>
 			</div>
-			<div class="d-flex ml-3z	">
-				<h5>Valoraciones </h5><a href="">Ver reseñas</a>  <span><img style="width: 100px;"
-					src="/images/image41358-1nfr-200h.png"> 
+
+
+			<div class="card mb-3 p-3">
+				<img src="/images/Fachada-establecimiento-Telepizza_1632147279_147856403_667x375.jpg"
+					class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-white">TelePizza</h5>
+					<p class="card-text">Es una red de restaurantes de comida rápida alrededor del mundo especializada
+						en la venta de hamburguesas, papas fritas y bebidas efervescentes que, además adhieren platillos
+						según el entorno en donde se encuentre.
+					</p>
+					<p class="card-text "><small class="">Centro Comercial "Plaza de Armas" | Local C-44 - 41001, 41001
+							Sevilla.</small><img class="ubicacion" src="/images/ubicacion.png"></p>
+				</div>
+				<div class="d-flex ml-3z	">
+					<h5>Valoraciones </h5> <a th:href="@{/mostrar-reseñas(nombreRestaurante='TelePizza')}"
+						th:text="'Ver reseñas de TelePizza'">Ver reseñas</a> <span><img style="width: 100px;"
+							src="/images/image41358-1nfr-200h.png">
+				</div>
 			</div>
-		</div>
-			
-			
+
+
 	</div>
 
 	<div class="container mt-5 mb-5">
-        <div class="card p-4">
-            <div class="card-body">
-                <h3 class="card-title text-white">¿Cómo podemos ayudarte?</h5>
-                <form class="form-inline">
-                    <div class="input-group w-100">
-                        <input type="text" class="form-control" placeholder="Busca aquí...">
-                        <div class="input-group-append">
-                            <button class="btn" id="botonsearch" type="submit">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-   
+		<div class="card p-4">
+			<div class="card-body">
+				<h3 class="card-title text-white">¿Cómo podemos ayudarte?</h5>
+					<form class="form-inline">
+						<div class="input-group w-100">
+							<input type="text" class="form-control" placeholder="Busca aquí...">
+							<div class="input-group-append">
+								<button class="btn" id="botonsearch" type="submit">Buscar</button>
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+	</div>
+
 
 	<footer class=" text-white py-4" id="footer">
-        <div class="container">
-            <div class="row">
+		<div class="container">
+			<div class="row">
 				<div class="col-md-3 text-center">
-                    <img src="/images/GLUTENFREE.png" alt="GlutenFree Eats Logo" class="img-fluid" style="max-width: 150px; margin-top: 90px;">
-                </div>
-                <div class="col-md-3">
-                    <h5>GlutenFree Eats</h5>
-                    <p>Plataforma web diseñada para ayudar a las personas que padecen de intolerancia al gluten a encontrar restaurantes que ofrezcan opciones seguras y deliciosas.</p>
-                </div>
-                
-                <div class="col-md-3">
-                    <h5>Enlaces</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Inicio</a></li>
-                        <li><a href="#" class="text-white">Restaurantes</a></li>
-                        <li><a href="#" class="text-white">Contacto</a></li>
-                        <li><a href="#" class="text-white">Galería</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contacto</h5>
-                    <ul class="list-unstyled">
-                        <li>Email: contacto@glutenfreeeats.com</li>
-                        <li>Teléfono: +34 123 456 789</li>
-                    </ul>
-                    <h5>Síguenos</h5>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook" width="24">
-                    </a>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/twitter.svg" alt="Twitter" width="24">
-                    </a>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram" width="24">
-                    </a>
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <p>&copy; 2024 GlutenFree Eats. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+					<img src="/images/GLUTENFREE.png" alt="GlutenFree Eats Logo" class="img-fluid"
+						style="max-width: 150px; margin-top: 90px;">
+				</div>
+				<div class="col-md-3">
+					<h5>GlutenFree Eats</h5>
+					<p>Plataforma web diseñada para ayudar a las personas que padecen de intolerancia al gluten a
+						encontrar restaurantes que ofrezcan opciones seguras y deliciosas.</p>
+				</div>
 
-<!-- Script de Bootstrap (jQuery y Popper.js incluidos) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+				<div class="col-md-3">
+					<h5>Enlaces</h5>
+					<ul class="list-unstyled">
+						<li><a href="#" class="text-white">Inicio</a></li>
+						<li><a href="#" class="text-white">Restaurantes</a></li>
+						<li><a href="#" class="text-white">Contacto</a></li>
+						<li><a href="#" class="text-white">Galería</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h5>Contacto</h5>
+					<ul class="list-unstyled">
+						<li>Email: contacto@glutenfreeeats.com</li>
+						<li>Teléfono: +34 123 456 789</li>
+					</ul>
+					<h5>Síguenos</h5>
+					<a href="#" class="text-white me-2">
+						<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook"
+							width="24">
+					</a>
+					<a href="#" class="text-white me-2">
+						<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/twitter.svg" alt="Twitter"
+							width="24">
+					</a>
+					<a href="#" class="text-white me-2">
+						<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram"
+							width="24">
+					</a>
+				</div>
+			</div>
+			<div class="text-center mt-3">
+				<p>&copy; 2024 GlutenFree Eats. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Script de Bootstrap (jQuery y Popper.js incluidos) -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
 </body>
 

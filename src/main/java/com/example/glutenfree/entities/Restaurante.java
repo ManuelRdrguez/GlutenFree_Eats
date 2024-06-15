@@ -27,7 +27,7 @@ public class Restaurante {
     private String direccion;
     private String horario;
     private String telefono;
-
+    private String opciones_celiacos;
     @OneToMany(mappedBy = "restaurante", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Reseña> reseñas;
 
@@ -43,12 +43,35 @@ public class Restaurante {
         this.telefono = telefono;
     }
 
-    // Getters and Setters
+    public Restaurante(Long id, String nombre, String descripcion, String direccion, String horario, String telefono,
+			String opciones_celiacos, List<Reseña> reseñas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.direccion = direccion;
+		this.horario = horario;
+		this.telefono = telefono;
+		this.opciones_celiacos = opciones_celiacos;
+		this.reseñas = reseñas;
+	}
+
+	// Getters and Setters
+    
+    
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public String getOpciones_celiacos() {
+		return opciones_celiacos;
+	}
+
+	public void setOpciones_celiacos(String opciones_celiacos) {
+		this.opciones_celiacos = opciones_celiacos;
+	}
+
+	public void setId(Long id) {
         this.id = id;
     }
 

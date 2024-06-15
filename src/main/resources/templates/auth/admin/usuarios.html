@@ -58,6 +58,9 @@
 					</tr>
 				</thead>
 				<tbody>
+					 <tr th:if="${#lists.isEmpty(usuarios)}">
+                <td colspan="5">No hay reseñas disponibles.</td>
+            </tr>
 					<tr th:each="usuario : ${usuarios} "  th:if="${usuario.email} != 'admin@example.com'">
 						<td th:text="${usuario.id}">ID</td>
 						<td th:text="${usuario.username}">Nombre</td>

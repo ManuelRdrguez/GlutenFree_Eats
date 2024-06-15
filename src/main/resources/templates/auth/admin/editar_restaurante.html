@@ -28,7 +28,7 @@
 				  <form th:action="@{${restaurante.id} == null ? '/admin/crearRestaurante' : '/admin/restaurantes/edit/' + ${restaurante.id}}" method="post" th:object="${restaurante}" class="form">
 					<div class="form-group">
 						<label class="control-label" for="nombre"></label> <input id="nombre" type="text"
-							class="form-control" th:field="*{nombreRestaurante}" required autofocus="autofocus" placeholder="Nombre de restaurante">
+							class="form-control" th:field="*{nombre}" required autofocus="autofocus" placeholder="Nombre de restaurante">
 					</div>
 
 					<div class="form-group">
@@ -48,6 +48,10 @@
 					<div class="form-group">
 						<label class="control-label" for="direccion"> </label> <input type="text"
 							id="direccion" class="form-control" th:field="*{direccion}" required autofocus="autofocus"placeholder="Dirección">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="opciones_celiacos"> </label> <input type="text"
+							id="opciones_celiacos" class="form-control" th:field="*{opciones_celiacos}" required autofocus="autofocus"placeholder="Opciones para celíacos">
 					</div>
 
 					<div class="form-group text-center">

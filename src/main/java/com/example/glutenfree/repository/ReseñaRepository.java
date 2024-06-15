@@ -12,4 +12,5 @@ import com.example.glutenfree.entities.Usuario;
 public interface ReseñaRepository extends JpaRepository<Reseña, Long> {
 
 	List<Reseña> findByUsuario(Usuario user);
+    List<Reseña> findByRestauranteNombre(String nombreRestaurante);
 }

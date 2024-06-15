@@ -34,6 +34,11 @@ public class ReseñaServiceImpl implements ReseñaService{
 	    return reseñaRepository.findByUsuario(user);
 
 	}
+	@Override
+	 public List<Reseña> encontrarReseñasPorNombreRestaurante(String nombreRestaurante) {
+        return reseñaRepository.findByRestauranteNombre(nombreRestaurante);
+    }
+	
 	
 	
 	}

@@ -3,6 +3,7 @@ package com.example.glutenfree.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,9 +18,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.glutenfree.dto.UserRegistro;
+import com.example.glutenfree.entities.Peticion;
 import com.example.glutenfree.entities.Reseña;
 import com.example.glutenfree.entities.Restaurante;
 import com.example.glutenfree.entities.Usuario;
+import com.example.glutenfree.service.PeticionService;
 import com.example.glutenfree.service.ReseñaService;
 import com.example.glutenfree.service.RestauranteService;
 import com.example.glutenfree.service.UserService;
@@ -35,6 +38,9 @@ public class RegistroController {
 	    private RestauranteService restauranteService;
 	 @Autowired
 	    private ReseñaService reseñaService;
+	 
+	 @Autowired
+	    private PeticionService peticionService;
 	@GetMapping("/login")
 	public String iniciarSesion() {
 		return "login";
@@ -44,13 +50,21 @@ public class RegistroController {
 		return "index";
 	}
 	@GetMapping("/restaurante")
-	public String verPaginaDeRestaurante(Model modelo) {
+	public String verPaginaDeRestaurante(Model modelo, String nombre) {
 		return "auth/user/restaurante";
 	}
 	@GetMapping("/contact")
-	public String verPaginaDeContacto(Model modelo) {
-		return "auth/user/contact";
-	}
+    public String verPaginaDeContacto(Model modelo) {
+        Peticion peticion = new Peticion();
+        modelo.addAttribute("peticion", peticion);
+        return "auth/user/contact";
+    }
+	@PostMapping("/contact")
+    public String procesarFormularioDeContacto(@ModelAttribute Peticion peticion) {
+        peticionService.save(peticion);
+        return "redirect:/contact?exito";
+    }
+	
 	
 	 @GetMapping("/ver_perfil")
 	    public String verPaginaDeVerPerfil(Model modelo) {
@@ -125,7 +139,7 @@ public class RegistroController {
         restauranteService.save(restaurante);
         List<Restaurante> restaurantes = restauranteService.findAll();
         model.addAttribute("restaurantes", restaurantes);
-        return "redirect:/restaurantes_visitados";
+        return "redirect:/restaurantesUser";
     }
     
     @GetMapping("/ver_resenas_user")
@@ -201,5 +215,17 @@ public class RegistroController {
         reseñaService.deleteById(id);
         return "redirect:/ver_resenas_user";
     }
+    @GetMapping("/mostrar-reseñas")
+    public String mostrarReseñas(@RequestParam("nombreRestaurante") String nombreRestaurante,Model model) {
+        List<Reseña> reseñas = reseñaService.encontrarReseñasPorNombreRestaurante(nombreRestaurante);
+        Restaurante restaurante = restauranteService.findByName(nombreRestaurante);
+        model.addAttribute("reseñas", reseñas);
+        model.addAttribute("nombreRestaurante", nombreRestaurante);
+        model.addAttribute("restaurante",restaurante ); 
 
-}
+        return "auth/user/mostrar-reseñas"; // nombre del template HTML para mostrar las reseñas
+    }
+ 
+    }
+
+
