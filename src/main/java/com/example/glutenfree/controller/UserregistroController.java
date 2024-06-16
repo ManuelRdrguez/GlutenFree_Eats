@@ -1,5 +1,7 @@
 package com.example.glutenfree.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.glutenfree.dto.UserRegistro;
+import com.example.glutenfree.entities.Usuario;
 import com.example.glutenfree.service.UserService;
 
 @Controller
@@ -30,7 +33,14 @@ public class UserregistroController {
 	}
 	@PostMapping
 	public String registrarCuentaUser(@ModelAttribute("Usuario") UserRegistro registro) {
-		userservice.save(registro); 
-		return "redirect:/registro?exito"; 
+		Usuario usuario = userservice.findByUsername(registro.getEmail());
+		if (usuario != null) {
+			return "redirect:/registro?error"; 
+
+		}else {
+			userservice.save(registro); 
+			return "redirect:/registro?exito"; 
+		}
+		
 	}
 }

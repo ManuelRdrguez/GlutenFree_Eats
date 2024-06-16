@@ -281,7 +281,7 @@
 						<h3 class="card-title text-black">¿Cómo podemos ayudarte?</h5>
 							<form class="form-inline">
 								<div class="input-group w-100">
-									<input type="text" class="form-control" placeholder="Busca aquí...">
+									<input type="text" class="form-control" placeholder="Escriba su petición....">
 									<div class="input-group-append">
 										<button class="btn" id="botonsearch" type="submit">Buscar</button>
 									</div>
@@ -307,10 +307,9 @@
 						<div class="col-md-3">
 							<h5>Enlaces</h5>
 							<ul class="list-unstyled">
-								<li><a href="#" class="text-white">Inicio</a></li>
-								<li><a href="#" class="text-white">Restaurantes</a></li>
-								<li><a href="#" class="text-white">Contacto</a></li>
-								<li><a href="#" class="text-white">Galería</a></li>
+								<li><a th:href="@{/user/home}" class="text-white">Inicio</a></li>
+								<li><a th:href="@{/restaurante}" class="text-white">Restaurantes</a></li>
+								<li><a th:href="@{/contact}" class="text-white">Contacto</a></li>
 							</ul>
 						</div>
 						<div class="col-md-3">

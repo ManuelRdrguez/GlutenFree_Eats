@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/css_indexAdmin.css}">
     <link rel="stylesheet" type="text/css" href="/glutenfree/src/main/resources/static/css/css_indexAdmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,6 +33,8 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" th:href="@{/logout}">Cerrar sesión <i class="bi bi-box-arrow-left"></i>
+                        </a></li>
+                        <li><a class="dropdown-item" th:href="@{/editar_perfil}">Editar perfil <i class="bi bi-person-circle"></i>
                         </a></li>
                 </ul>
             </div>
@@ -107,53 +110,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <footer class=" text-white py-4" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <img src="/images/GLUTENFREE.png" alt="GlutenFree Eats Logo" class="img-fluid"
-                        style="max-width: 150px; margin-top: 90px;">
-                </div>
-                <div class="col-md-3">
-                    <h5>GlutenFree Eats</h5>
-                    <p>Plataforma web diseñada para ayudar a las personas que padecen de intolerancia al gluten
-                        a encontrar restaurantes que ofrezcan opciones seguras y deliciosas.</p>
-                </div>
+   <footer class=" text-white py-4" id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 text-center">
+							<img src="/images/GLUTENFREE.png" alt="GlutenFree Eats Logo" class="img-fluid"
+								style="max-width: 150px; margin-top: 90px;">
+						</div>
+						<div class="col-md-3">
+							<h5>GlutenFree Eats</h5>
+							<p>Plataforma web diseñada para ayudar a las personas que padecen de intolerancia al gluten
+								a encontrar restaurantes que ofrezcan opciones seguras y deliciosas.</p>
+						</div>
 
-                <div class="col-md-3">
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white"></a></li>
-                        <li><a href="#" class="text-white"></a></li>
-                        <li><a href="#" class="text-white"></a></li>
-                        <li><a href="#" class="text-white"></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contacto</h5>
-                    <ul class="list-unstyled">
-                        <li>Email: contacto@glutenfreeeats.com</li>
-                        <li>Teléfono: +34 123 456 789</li>
-                    </ul>
-                    <h5>Síguenos</h5>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg"
-                            alt="Facebook" width="24">
-                    </a>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/twitter.svg" alt="Twitter"
-                            width="24">
-                    </a>
-                    <a href="#" class="text-white me-2">
-                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg"
-                            alt="Instagram" width="24">
-                    </a>
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <p>&copy; 2024 GlutenFree Eats. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+						<div class="col-md-3">
+							<h5>Enlaces</h5>
+							<ul class="list-unstyled">
+								<li><a th:href="@{/user/home}" class="text-white">Inicio</a></li>
+								<li><a th:href="@{/restaurante}" class="text-white">Restaurantes</a></li>
+								<li><a th:href="@{/contact}" class="text-white">Contacto</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h5>Contacto</h5>
+							<ul class="list-unstyled">
+								<li>Email: contacto@glutenfreeeats.com</li>
+								<li>Teléfono: +34 123 456 789</li>
+							</ul>
+							<h5>Síguenos</h5>
+							<a href="#" class="text-white me-2">
+								<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg"
+									alt="Facebook" width="24">
+							</a>
+							<a href="#" class="text-white me-2">
+								<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/twitter.svg" alt="Twitter"
+									width="24">
+							</a>
+							<a href="#" class="text-white me-2">
+								<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg"
+									alt="Instagram" width="24">
+							</a>
+						</div>
+					</div>
+					<div class="text-center mt-3">
+						<p>&copy; 2024 GlutenFree Eats. Todos los derechos reservados.</p>
+					</div>
+				</div>
+			</footer>
+
 </body>
 
 </html>

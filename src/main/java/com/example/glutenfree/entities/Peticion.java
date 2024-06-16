@@ -26,7 +26,12 @@ public class Peticion {
         this.mensaje = mensaje;
     }
 
-    // Constructor sin parámetros
+    public Peticion(String mensaje) {
+		super();
+		this.mensaje = mensaje;
+	}
+
+	// Constructor sin parámetros
     public Peticion() {}
 
     // Getters y Setters
